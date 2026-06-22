@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -26,17 +27,19 @@ Responsibilities:
 @Component
 public class JwtUtility {
 
+    @Value("${jwt.secret}")
+    private String secret;
+
     /*
     Secret Key used for signing token
 
     IMPORTANT:
     Keep this private in real projects
     */
-    private static final String SECRET_KEY = "hsdjfghsdjfh348534857348jsdhjsdhfjsdgh8478457hdgjfh478";
-
-    // Convert String Key → SecretKey
-
-    private final SecretKey secretKey = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET_KEY));
+    private SecretKey getSecretKey() {
+        return Keys.hmacShaKeyFor(
+                Decoders.BASE64.decode(secret));
+    }
 
     /*
     Generate JWT Token
@@ -47,22 +50,21 @@ public class JwtUtility {
     Output:
     JWT Token
     */
-    public String generateToken(
-            String email){
+    public String generateToken(String email) {
 
-        Map<String,Object> claims = new HashMap<>();
+        Map<String, Object> claims = new HashMap<>();
 
         return createToken(
                 claims,
                 email);
     }
 
-
-    // Create Actual Token
-
+    /*
+    Create Actual Token
+    */
     private String createToken(
-            Map<String,Object> claims,
-            String email){
+            Map<String, Object> claims,
+            String email) {
 
         return Jwts.builder()
 
@@ -82,9 +84,7 @@ public class JwtUtility {
                                 System.currentTimeMillis()
                                         + 24 * 60 * 60 * 1000))
 
-                .signWith(
-                        secretKey,
-                        Jwts.SIG.HS256)
+                .signWith(getSecretKey(), Jwts.SIG.HS256)
 
                 .compact();
     }
@@ -99,7 +99,7 @@ public class JwtUtility {
     */
     public Boolean validateToken(
             String token,
-            String email){
+            String email) {
 
         String extractedEmail =
                 extractEmail(token);
@@ -112,7 +112,7 @@ public class JwtUtility {
     Extract Email from Token
     */
     public String extractEmail(
-            String token){
+            String token) {
 
         return extractClaim(
                 token,
@@ -123,7 +123,7 @@ public class JwtUtility {
     Check Expiry
     */
     private Boolean isTokenExpired(
-            String token){
+            String token) {
 
         return extractExpiration(token)
                 .before(new Date());
@@ -133,7 +133,7 @@ public class JwtUtility {
     Extract Expiration Date
     */
     private Date extractExpiration(
-            String token){
+            String token) {
 
         return extractClaim(
                 token,
@@ -145,7 +145,7 @@ public class JwtUtility {
     */
     public <T> T extractClaim(
             String token,
-            Function<Claims,T> resolver){
+            Function<Claims, T> resolver) {
 
         Claims claims =
                 extractAllClaims(token);
@@ -157,11 +157,11 @@ public class JwtUtility {
     Read Token Payload
     */
     private Claims extractAllClaims(
-            String token){
+            String token) {
 
         return Jwts.parser()
 
-                .verifyWith(secretKey)
+                .verifyWith(getSecretKey())
 
                 .build()
 

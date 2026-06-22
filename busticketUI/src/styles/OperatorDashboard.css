@@ -1,0 +1,148 @@
+.operator-hero{
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color: white;
+    padding: 60px;
+    border-radius: 25px;
+    margin-bottom: 40px;
+}
+
+.operator-hero h1{
+    font-weight: 700;
+}
+
+.operator-hero p{
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Stats Cards */
+
+.stats-card{
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px 20px;
+
+    min-height: 240px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover{
+    transform: translateY(-8px);
+}
+
+.dashboard-icon{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.stats-card h3{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.stats-card p{
+    color: #6c757d;
+    font-size: 18px;
+}
+
+/* Dashboard Buttons */
+
+.dashboard-btn{
+    height: 65px;
+    border: none;
+    border-radius: 15px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+.dashboard-btn:hover{
+    transform: translateY(-3px);
+}
+
+/* Add Bus */
+
+.add-bus-btn{
+    background: #198754;
+}
+
+.add-bus-btn:hover{
+    background: #157347;
+}
+
+/* Add Route */
+
+.add-route-btn{
+    background: #0d6efd;
+}
+
+.add-route-btn:hover{
+    background: #0b5ed7;
+}
+
+/* My Buses */
+
+.my-buses-btn{
+    background: #fd7e14;
+}
+
+.my-buses-btn:hover{
+    background: #e96b02;
+}
+
+/* My Routes */
+
+.my-routes-btn{
+    background: #6f42c1;
+}
+
+.my-routes-btn:hover{
+    background: #5b35a0;
+}
+
+/* My Bookings */
+.my-bookings-btn {
+    background: #dc3545;
+    
+}
+
+.my-bookings-btn:hover {
+    background: #bb2d3b;
+        
+}
+
+
+/* Bottom Info Card */
+
+.dashboard-info-card{
+    border: none;
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
+
+    margin-bottom: 40px;
+}
+
+.dashboard-info-card .card-body{
+    padding: 35px;
+}
+
+.dashboard-info-card h4{
+    font-weight: 700;
+}

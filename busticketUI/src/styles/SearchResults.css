@@ -1,0 +1,62 @@
+.search-card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.search-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.bus-name{
+    font-size:24px;
+    font-weight:700;
+}
+
+.bus-type{
+    color:#6c757d;
+    font-size:14px;
+}
+
+.time-text{
+    font-size:28px;
+    font-weight:700;
+}
+
+.city-text{
+    font-size:15px;
+    color:#6c757d;
+}
+
+.route-line{
+    color:#198754;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.select-seat-btn{
+    border-radius:12px;
+    padding:10px 20px;
+    font-weight:600;
+}
+
+.fare-box{
+    background:#f8f9fa;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+}
+
+.fare-label{
+    color:#6c757d;
+    font-size:14px;
+}
+
+.fare-amount{
+    color:#198754;
+    font-size:24px;
+    font-weight:700;
+}

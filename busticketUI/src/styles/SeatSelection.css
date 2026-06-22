@@ -1,0 +1,70 @@
+.seat-layout-card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.seat-btn{
+    width:60px;
+    height:45px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.selected-seat{
+    background:#198754 !important;
+    color:white !important;
+    border:none !important;
+}
+
+.booked-seat{
+    background:#212529 !important;
+    color:white !important;
+    border:none !important;
+}
+
+.point-card{
+    border-radius:15px;
+}
+
+.passenger-card{
+    border:none;
+    border-radius:15px;
+    padding:20px;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.review-card{
+    background:#f8f9fa;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.review-header{
+    border-bottom:1px solid #dee2e6;
+    margin-bottom:20px;
+    padding-bottom:15px;
+}
+
+.amount-box{
+    font-size:42px;
+    font-weight:800;
+    color:#198754;
+    margin:20px 0;
+}
+
+.proceed-tb{
+    background:#198754 !important;
+    color:white !important;
+    border:none !important;
+    border-radius:12px;
+    padding:12px 25px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.proceed-tb:hover{
+    background:#157347 !important;
+}

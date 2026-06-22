@@ -1,0 +1,120 @@
+.admin-hero{
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:white;
+    padding:60px;
+    border-radius:25px;
+}
+
+.stats-card{
+    border:none;
+    border-radius:18px;
+    text-align:center;
+
+    padding:18px;
+
+    min-height:140px;
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.stats-card:hover{
+    transform:translateY(-5px);
+}
+
+.stats-card:hover{
+    transform:translateY(-8px);
+}
+
+.dashboard-icon{
+    font-size:32px;
+    margin-bottom:8px;
+}
+.stats-card h2{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:4px;
+}
+
+.stats-card p{
+    margin:0;
+    font-size:15px;
+    font-weight:600;
+    color:#6c757d;
+}
+
+.admin-btn{
+    height:65px;
+
+    border:none;
+    border-radius:15px;
+
+    color:white;
+    font-size:18px;
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.admin-btn:hover{
+    transform:translateY(-3px);
+}
+
+.customers-btn{
+    background:#0d6efd;
+}
+
+.operators-btn{
+    background:#198754;
+}
+
+.buses-btn{
+    background:#fd7e14;
+}
+
+.routes-btn{
+    background:#6f42c1;
+}
+.bookings-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+}
+
+.bookings-btn:hover {
+    background: #bb2d3b;
+    color: white;
+}
+.pending-operators-btn {
+    background-color: #0e0b0b;
+    color: white ;
+    border: none;
+    font-weight: 600;
+}
+
+.pending-operators-btn:hover {
+    background-color: #bb2d3b;
+    color: white;
+}
+
+
+.admin-btn{
+    width:150px;
+    height:80px;
+
+    border:none;
+    border-radius:30px;
+
+    color:white;
+    font-size:22px;
+    font-weight:600;
+
+    transition:0.3s;
+}
